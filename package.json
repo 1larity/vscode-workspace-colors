@@ -1,0 +1,82 @@
+{
+  "name": "vscode-workspace-colors",
+  "displayName": "Workspace Colors",
+  "description": "Give each VS Code workspace a memorable title bar, sidebar, and status bar colour.",
+  "version": "0.9.4",
+  "publisher": "stellaris",
+  "license": "CC-BY-NC-SA-4.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "workspaceColors.choose",
+        "title": "Workspace Colors: Open Colour Wheel"
+      },
+      {
+        "command": "workspaceColors.choosePalette",
+        "title": "Workspace Colors: Choose Named Palette"
+      },
+      {
+        "command": "workspaceColors.cycle",
+        "title": "Workspace Colors: Cycle Colour"
+      },
+      {
+        "command": "workspaceColors.clear",
+        "title": "Workspace Colors: Clear Colour"
+      },
+      {
+        "command": "workspaceColors.chooseIntensity",
+        "title": "Workspace Colors: Choose Intensity"
+      }
+    ],
+    "configuration": {
+      "title": "Workspace Colors",
+      "properties": {
+        "workspaceColors.autoAssign": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically assign a stable colour to each workspace when it opens."
+        },
+        "workspaceColors.showStatusLabel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the current workspace colour name in the status bar."
+        },
+        "workspaceColors.intensity": {
+          "type": "string",
+          "enum": [
+            "Bright",
+            "Shaded",
+            "Umbra",
+            "Subdued",
+            "Dim"
+          ],
+          "default": "Subdued",
+          "description": "Colour intensity. Subdued is the original palette; each workspace can override this setting."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test",
+    "package": "npx --yes @vscode/vsce@4.0.0 package --no-dependencies"
+  },
+  "devDependencies": {},
+  "homepage": "https://evile.uk/redesign/projects/workspace-colors/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1larity/vscode-workspace-colors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/1larity/vscode-workspace-colors/issues"
+  }
+}

@@ -1,0 +1,4 @@
+const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+function load(level,light){const box={module:{exports:{}},require:()=>({window:{activeColorTheme:{kind:light?1:2}},ColorThemeKind:{Light:1,HighContrastLight:4},workspace:{getConfiguration:()=>({get:()=>level})}})};vm.runInNewContext(fs.readFileSync('extension.js','utf8')+'\nmodule.exports.custom=colourForCustom;',box);return box.module.exports;}
+test('custom Subdued has foreground',()=>assert.match(load('Subdued',false).custom('#257342').foreground,/^#[0-9a-f]{6}$/i));
+test('Dim is darker than Subdued in either mode',()=>{for(const light of [false,true]) {const sum=x=>[1,3,5].reduce((s,i)=>s+parseInt(x.slice(i,i+2),16),0);assert.ok(sum(load('Dim',light).custom('#257342').base)<sum(load('Subdued',light).custom('#257342').base));}});
