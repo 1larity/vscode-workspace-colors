@@ -7,10 +7,10 @@ Give each VS Code workspace a memorable title bar, sidebar, and status bar colou
 ## Install
 
 Requires VS Code 1.85.0 or newer. Install **Workspace Colour Wheel** from the
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=1larity.vscode-workspace-colors): search for it in the Extensions view, or run
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RichardBeech.vscode-workspace-colors): search for it in the Extensions view, or run
 
 ```sh
-code --install-extension 1larity.vscode-workspace-colors
+code --install-extension RichardBeech.vscode-workspace-colors
 ```
 
 To install from a file instead, download **vscode-workspace-colors-0.9.5.vsix** from the
