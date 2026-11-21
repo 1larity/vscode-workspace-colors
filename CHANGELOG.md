@@ -2,7 +2,7 @@
 
 ## 0.9.5 - 2026-11-21
 
-- Published on the Visual Studio Marketplace as **Workspace Colour Wheel** (`RichardBeech.vscode-workspace-colors`). The extension ID changed: uninstall an earlier VSIX build before installing this one. Colours already applied stay in place; the picker starts with no saved choices.
+- Published on the Visual Studio Marketplace as **Workspace Colour Wheel** (`RichardBeech.workspace-colour-wheel`). The extension ID changed: uninstall an earlier VSIX build before installing this one. Colours already applied stay in place; the picker starts with no saved choices.
 - Square Marketplace icon.
 
 ## 0.9.4 - 2026-10-23

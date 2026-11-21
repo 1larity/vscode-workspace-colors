@@ -1,5 +1,5 @@
 {
-  "name": "vscode-workspace-colors",
+  "name": "workspace-colour-wheel",
   "displayName": "Workspace Colour Wheel",
   "description": "Give each VS Code workspace a memorable title bar, sidebar, and status bar colour.",
   "version": "0.9.5",
