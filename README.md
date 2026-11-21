@@ -79,13 +79,10 @@ npx --yes @vscode/vsce@4.0.0 package --no-dependencies
 ```
 
 Open the checkout in VS Code and press **F5** to launch an Extension Development
-Host. Tests run locally with synthetic fixtures; they do not prove live provider
-availability or interactive UI acceptance.
+Host. Run `npm test` for the offline test suite.
 
 - `extension.js`: VS Code integration.
-- `lib/` (quota monitors): provider clients, parsers and monitor lifecycle.
 - `test/`: offline regression coverage.
-- `.vscodeignore`: package allow-list; excludes tests, screenshots, credentials,
-  local editor settings, source artwork and previous VSIX files.
+- `.vscodeignore`: files included in the extension package.
 
 See [SECURITY.md](SECURITY.md) for sensitive reporting guidance.

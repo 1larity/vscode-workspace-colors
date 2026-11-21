@@ -1,6 +1,5 @@
 ## 0.9.4 — 2026-10-23
 
-- Public release documentation and minimal VSIX packaging.
 - User-owned material now CC BY-NC-SA 4.0; third-party and earlier grants preserved.
 - Opaque sticky-scroll row backgrounds and invalid saved-palette recovery.
 
