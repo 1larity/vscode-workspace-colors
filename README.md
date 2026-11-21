@@ -1,37 +1,27 @@
-<p align="center"><img src="assets/logo.png" alt="Workspace Colors" width="640"></p>
+<p align="center"><img src="assets/logo.png" alt="Workspace Colour Wheel" width="640"></p>
 
-# Workspace Colors
+# Workspace Colour Wheel
 
 Give each VS Code workspace a memorable title bar, sidebar, and status bar colour.
 
 ## Install
 
-Requires VS Code 1.85.0 or newer. Download **vscode-workspace-colors-0.9.4.vsix** from the
-[EVILE project page](https://evile.uk/redesign/projects/workspace-colors/).
-
-1. Open **Extensions → … → Install from VSIX…**.
-2. Select the downloaded file.
-3. Run **Developer: Reload Window** if the extension has not appeared.
-
-Or install from a terminal:
+Requires VS Code 1.85.0 or newer. Install **Workspace Colour Wheel** from the
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=1larity.vscode-workspace-colors): search for it in the Extensions view, or run
 
 ```sh
-code --install-extension vscode-workspace-colors-0.9.4.vsix
+code --install-extension 1larity.vscode-workspace-colors
 ```
 
-Give VS Code projects their own colours. Includes a colour wheel, RGB/HSV sliders,
-five intensity schemes (Bright, Shaded, Umbra, Subdued, Dim), dark/light palettes,
-and previews for title bar, editor background and pane header.
+To install from a file instead, download **vscode-workspace-colors-0.9.5.vsix** from the
+[EVILE project page](https://evile.uk/redesign/projects/workspace-colors/) and choose
+**Extensions → … → Install from VSIX…**, or run `code --install-extension vscode-workspace-colors-0.9.5.vsix`.
+
+If you installed a VSIX before version 0.9.5, uninstall it first: earlier builds
+used a different publisher ID, so VS Code treats them as a separate extension. Colours already applied stay in place; the picker starts with no saved choices.
 
 ## Choose a colour
 
-Download the VSIX from https://evile.uk/redesign/projects/workspace-colors/ and run:
-
-```sh
-code --install-extension vscode-workspace-colors-0.9.4.vsix
-```
-
-Or use Extensions → … → Install from VSIX. Run Developer: Reload Window afterwards.
 Click the colour status item or run Workspace Colors: Open Colour Wheel.
 Apply saves without closing; Close dismisses the picker. Named palettes and
 intensity also have separate commands. Saved workspace choices are reused when
@@ -75,7 +65,7 @@ and no compilation step. Use Node.js 22+ for development.
 ```sh
 npm test
 node --check extension.js
-npx --yes @vscode/vsce@4.0.0 package --no-dependencies
+npx --yes @vscode/vsce@4.1.1 package --no-dependencies --githubBranch public
 ```
 
 Open the checkout in VS Code and press **F5** to launch an Extension Development

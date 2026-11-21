@@ -1,11 +1,17 @@
-## 0.9.4 — 2026-10-23
+# Changelog
+
+## 0.9.5 - 2026-11-21
+
+- Published on the Visual Studio Marketplace as **Workspace Colour Wheel** (`1larity.vscode-workspace-colors`). The extension ID changed: uninstall an earlier VSIX build before installing this one. Colours already applied stay in place; the picker starts with no saved choices.
+- Square Marketplace icon.
+
+## 0.9.4 - 2026-10-23
 
 - User-owned material now CC BY-NC-SA 4.0; third-party and earlier grants preserved.
 - Opaque sticky-scroll row backgrounds and invalid saved-palette recovery.
 
-# Changelog
 
-## 0.9.3 — preview
+## 0.9.3 - preview
 
 - Fix custom Subdued foreground and light-mode Dim ordering.
 - Retain HSV state during value edits and recover saved workspace palettes.

@@ -1,14 +1,15 @@
 {
   "name": "vscode-workspace-colors",
-  "displayName": "Workspace Colors",
+  "displayName": "Workspace Colour Wheel",
   "description": "Give each VS Code workspace a memorable title bar, sidebar, and status bar colour.",
-  "version": "0.9.4",
-  "publisher": "stellaris",
+  "version": "0.9.5",
+  "publisher": "1larity",
   "license": "CC-BY-NC-SA-4.0",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
+    "Themes",
     "Other"
   ],
   "activationEvents": [
@@ -68,7 +69,7 @@
   },
   "scripts": {
     "test": "node --test",
-    "package": "npx --yes @vscode/vsce@4.0.0 package --no-dependencies"
+    "package": "npx --yes @vscode/vsce@4.1.1 package --no-dependencies --githubBranch public"
   },
   "devDependencies": {},
   "homepage": "https://evile.uk/redesign/projects/workspace-colors/",
@@ -78,5 +79,15 @@
   },
   "bugs": {
     "url": "https://github.com/1larity/vscode-workspace-colors/issues"
-  }
+  },
+  "icon": "assets/icon.png",
+  "keywords": [
+    "workspace",
+    "color",
+    "colour",
+    "title bar",
+    "status bar",
+    "theme",
+    "peacock"
+  ]
 }
