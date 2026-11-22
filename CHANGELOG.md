@@ -1,3 +1,7 @@
+## 0.9.6 - 2026-11-22
+
+- Updated the user guide and feature list.
+
 # Changelog
 
 ## 0.9.5 - 2026-11-21
