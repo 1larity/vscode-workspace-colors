@@ -2,50 +2,58 @@
 
 # Workspace Colour Wheel
 
-Give each VS Code workspace a memorable title bar, sidebar, and status bar colour.
+Give each VS Code workspace its own colour so you can tell project windows apart at a glance.
 
-## Install
+## Features
 
-Requires VS Code 1.85.0 or newer. Install **Workspace Colour Wheel** from the
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RichardBeech.workspace-colour-wheel): search for it in the Extensions view, or run
+- Automatically assign a colour when you open a workspace.
+- Pick a custom colour with a wheel and RGB and HSV controls.
+- Choose a named palette or cycle through the available colours.
+- Adjust the intensity and preview the available colour schemes.
+- Save your choice for the workspace and reuse it when you return.
 
-```sh
-code --install-extension RichardBeech.workspace-colour-wheel
-```
+## Get started
 
-To install from a file instead, download **workspace-colour-wheel-0.9.5.vsix** from the
-[EVILE project page](https://evile.uk/redesign/projects/workspace-colors/) and choose
-**Extensions → … → Install from VSIX…**, or run `code --install-extension workspace-colour-wheel-0.9.5.vsix`.
+1. Install **Workspace Colour Wheel** from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RichardBeech.workspace-colour-wheel). VS Code 1.85 or newer is required.
+2. Open a folder or workspace. A colour is assigned automatically by default.
+3. Click the colour name in the status bar, or open the Command Palette (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS) and run **Workspace Colors: Open Colour Wheel**.
+4. Choose a colour on the wheel, adjust the controls and select a scheme. Click **Apply colour and scheme** to save it. Click **Close** when finished.
 
-If you installed a VSIX before version 0.9.5, uninstall it first: earlier builds
-used a different publisher ID, so VS Code treats them as a separate extension. Colours already applied stay in place; the picker starts with no saved choices.
+The picker also offers a random colour in the selected scheme. Your choice is remembered for the same workspace on the same VS Code installation/profile.
 
-## Choose a colour
+## Commands
 
-Click the colour status item or run Workspace Colors: Open Colour Wheel.
-Apply saves without closing; Close dismisses the picker. Named palettes and
-intensity also have separate commands. Saved workspace choices are reused when
-reopening the same workspace on the same VS Code installation/profile.
+Open the Command Palette and search for **Workspace Colors**:
 
-## Preview limitations and settings
+| Command | What it does |
+| --- | --- |
+| Open Colour Wheel | Choose a custom colour and scheme. |
+| Choose Named Palette | Select one of eight named palettes. |
+| Cycle Colour | Move to the next named palette. |
+| Choose Intensity | Select Bright, Shaded, Umbra, Subdued or Dim. |
+| Clear Colour | Remove the colours managed by the extension from the current workspace. |
 
-- Automatically writes workbench.colorCustomizations on activation. Back up existing
-  colour settings first: managed keys are overwritten, and Clear removes those keys
-  rather than restoring previous values. Unrelated keys are retained.
-- Empty windows use global settings, affecting other windows which inherit them.
-  Open a folder/workspace for independent project settings.
-- Eight named colours: random assignments are best effort, not guaranteed distinct
-  across simultaneously opened windows. Historical assignments are retained.
-- After changing theme with the picker open, close and reopen it to refresh previews.
-- Custom title-bar colours require window.titleBarStyle set to custom on systems
-  using a native title bar. This extension does not change that setting.
-- UI/theme coverage is still being validated; this is a preview, not a 1.0 release.
-- No accounts, credentials, telemetry or runtime network calls are required.
+## Settings
 
-## Privacy and workspace trust
+Find these in VS Code Settings by searching for `workspaceColors`:
 
-No telemetry is sent by this extension. Review provider-specific credential
-handling above. Never include keys, tokens or account responses in bug reports.
+| Setting | Default | What it does |
+| --- | --- | --- |
+| `workspaceColors.autoAssign` | `true` | Assign a colour automatically when a workspace opens. |
+| `workspaceColors.showStatusLabel` | `true` | Show the colour name in the status bar. |
+| `workspaceColors.intensity` | `Subdued` | Set the default intensity; individual workspaces can override it. |
+
+## Colour settings and troubleshooting
+
+- The extension writes its colours to `workbench.colorCustomizations`. Back up existing colour settings first: it overwrites the keys it manages, and **Clear Colour** removes those keys rather than restoring their former values. Other keys are retained.
+- Open a folder or workspace for project-specific colours. An empty window uses global settings, which can affect other windows that inherit them.
+- Automatic assignment tries to choose an unused named palette, but colours can repeat when the available palettes are in use.
+- If you change your VS Code theme while the wheel is open, close and reopen the wheel to refresh its previews.
+- If the title bar does not change colour, your system may use a native title bar. Set `window.titleBarStyle` to `custom` to use VS Code's custom title bar.
+
+## Privacy
+
+The extension runs locally and sends no telemetry.
 
 ## Licence
 
@@ -56,23 +64,3 @@ International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 changes, use non-commercially and share adaptations under the same licence.
 Third-party material retains its own terms; previous licence grants are not revoked.
 See [LICENSE](LICENSE) for the legal text.
-
-## Developer guide
-
-The extension is plain CommonJS JavaScript with **no runtime npm dependencies**
-and no compilation step. Use Node.js 22+ for development.
-
-```sh
-npm test
-node --check extension.js
-npx --yes @vscode/vsce@4.1.1 package --no-dependencies --githubBranch public
-```
-
-Open the checkout in VS Code and press **F5** to launch an Extension Development
-Host. Run `npm test` for the offline test suite.
-
-- `extension.js`: VS Code integration.
-- `test/`: offline regression coverage.
-- `.vscodeignore`: files included in the extension package.
-
-See [SECURITY.md](SECURITY.md) for sensitive reporting guidance.
