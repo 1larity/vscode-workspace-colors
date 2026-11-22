@@ -14,10 +14,9 @@ Give each VS Code workspace its own colour so you can tell project windows apart
 
 ## Get started
 
-1. Install **Workspace Colour Wheel** from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RichardBeech.workspace-colour-wheel). VS Code 1.85 or newer is required.
-2. Open a folder or workspace. A colour is assigned automatically by default.
-3. Click the colour name in the status bar, or open the Command Palette (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS) and run **Workspace Colors: Open Colour Wheel**.
-4. Choose a colour on the wheel, adjust the controls and select a scheme. Click **Apply colour and scheme** to save it. Click **Close** when finished.
+1. Open a folder or workspace. A colour is assigned automatically by default.
+2. Click the colour name in the status bar, or open the Command Palette (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS) and run **Workspace Colors: Open Colour Wheel**.
+3. Choose a colour on the wheel, adjust the controls and select a scheme. Click **Apply colour and scheme** to save it. Click **Close** when finished.
 
 The picker also offers a random colour in the selected scheme. Your choice is remembered for the same workspace on the same VS Code installation/profile.
 
